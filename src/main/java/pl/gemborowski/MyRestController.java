@@ -28,7 +28,7 @@ public class MyRestController {
 
         List<Group> groups = new ArrayList<>();
 
-        while (clans.size() > 0)
+        while (!clans.isEmpty())
         {
             List<Clan> groupClans = new ArrayList<>();
 
