@@ -1,4 +1,4 @@
-package pl.gemborowski.model;
+package pl.gemborowski.model.game;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

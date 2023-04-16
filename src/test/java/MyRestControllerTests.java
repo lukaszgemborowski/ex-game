@@ -1,8 +1,8 @@
 
 import org.junit.jupiter.api.Test;
 import pl.gemborowski.MyRestController;
-import pl.gemborowski.model.Clan;
-import pl.gemborowski.model.Order;
+import pl.gemborowski.model.game.Clan;
+import pl.gemborowski.model.game.Order;
 
 import java.util.ArrayList;
 import java.util.Arrays;

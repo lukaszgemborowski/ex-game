@@ -1,4 +1,4 @@
-package pl.gemborowski.model;
+package pl.gemborowski.model.game;
 
 import java.util.ArrayList;
 import java.util.List;

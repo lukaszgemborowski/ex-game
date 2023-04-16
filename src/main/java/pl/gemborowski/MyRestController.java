@@ -2,10 +2,10 @@ package pl.gemborowski;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pl.gemborowski.model.Clan;
-import pl.gemborowski.model.Group;
-import pl.gemborowski.model.Order;
-import pl.gemborowski.model.Players;
+import pl.gemborowski.model.game.Clan;
+import pl.gemborowski.model.game.Group;
+import pl.gemborowski.model.game.Order;
+import pl.gemborowski.model.game.Players;
 
 import java.util.*;
 
