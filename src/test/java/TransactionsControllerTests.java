@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TransactionsControllerTests {
+class TransactionsControllerTests {
     @Test
     void testEmptyTransactionsInput() {
         List<Account> transactions = TransactionsController.processTransactions(new ArrayList<Transaction>());

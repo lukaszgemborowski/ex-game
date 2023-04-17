@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ATMControllerTests {
+class ATMControllerTests {
     @Test
     void testEmptyInput() {
         // test empty input to ATMController.calculateOrder function
