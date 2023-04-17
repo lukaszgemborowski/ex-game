@@ -1,4 +1,4 @@
-package pl.gemborowski;
+package pl.gemborowski.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,8 +10,7 @@ import pl.gemborowski.model.game.Players;
 import java.util.*;
 
 @RestController
-@RequestMapping("/")
-public class MyRestController {
+public class OnlineGameController {
     public static Order generateOrder(List<Clan> clans, int groupSize) {
         // Sort clans by points and number of players
         Collections.sort(clans, new Comparator<Clan>() {

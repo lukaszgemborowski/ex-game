@@ -1,6 +1,6 @@
 
 import org.junit.jupiter.api.Test;
-import pl.gemborowski.MyRestController;
+import pl.gemborowski.controllers.OnlineGameController;
 import pl.gemborowski.model.game.Clan;
 import pl.gemborowski.model.game.Order;
 
@@ -29,7 +29,7 @@ class MyServiceTest {
         int groupSize = 10;
 
         // Call the generateOrder method
-        Order order = MyRestController.generateOrder(clans, groupSize);
+        Order order = OnlineGameController.generateOrder(clans, groupSize);
 
         // Check if the order has the correct number of groups
         assertEquals(3, order.size());
