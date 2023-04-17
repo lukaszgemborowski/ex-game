@@ -20,11 +20,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = Main.class)
-public class AcceptanceTests {
+class AcceptanceTests {
     @Autowired
     private MockMvc mockMvc;
 
-    public String loadResource(String name) {
+    String loadResource(String name) {
         // Load the JSON file as an InputStream
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(name);
 
@@ -34,7 +34,7 @@ public class AcceptanceTests {
                 .collect(Collectors.joining("\n"));
     }
 
-    public void executeTest(String endpoint, String inputJsonFile, String expectedOutputJsonFile) throws Exception {
+    void executeTest(String endpoint, String inputJsonFile, String expectedOutputJsonFile) throws Exception {
         String inputJson = loadResource(inputJsonFile);
         String expectedOutputJson = loadResource(expectedOutputJsonFile);
 
@@ -46,22 +46,22 @@ public class AcceptanceTests {
     }
 
     @Test
-    public void onlineGameCalculateRef1() throws Exception {
+    void onlineGameCalculateRef1() throws Exception {
         executeTest("/onlinegame/calculate", "online_game_input_1.json", "online_game_output_1.json");
     }
 
     @Test
-    public void ATMRef1() throws Exception {
+    void ATMRef1() throws Exception {
         executeTest("/atms/calculateOrder", "atm_input_1.json", "atm_output_1.json");
     }
 
     @Test
-    public void ATMRef2() throws Exception {
+    void ATMRef2() throws Exception {
         executeTest("/atms/calculateOrder", "atm_input_2.json", "atm_output_2.json");
     }
 
     @Test
-    public void TransactionsRef1() throws Exception {
+    void TransactionsRef1() throws Exception {
         executeTest("/transactions/report", "transactions_input_1.json", "transactions_output_1.json");
     }
 }

@@ -9,6 +9,8 @@ import java.util.*;
 
 @RestController
 public class ATMController {
+    private ATMController() {}
+
     @PostMapping(value = "/atms/calculateOrder", consumes = "application/json", produces = "application/json")
     @ResponseBody
     public static List<ATM> calculateOrder(@RequestBody ServiceTasks tasks) {
