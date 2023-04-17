@@ -10,7 +10,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MyServiceTest {
+class OnlineGameControllerTests {
 
     @Test
     void testGenerateOrder() {
@@ -37,5 +37,18 @@ class MyServiceTest {
         assertEquals(4, order.get(0).size());
         assertEquals(2, order.get(1).size());
         assertEquals(2, order.get(2).size());
+    }
+
+    @Test
+    void testEmptyInput() {
+        // Prepare input data
+        List<Clan> clans = new ArrayList<>();
+        int groupSize = 10;
+
+        // Call the generateOrder method
+        Order order = OnlineGameController.generateOrder(clans, groupSize);
+
+        // Check if the order has the correct number of groups
+        assertEquals(0, order.size());
     }
 }
